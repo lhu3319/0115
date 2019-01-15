@@ -16,6 +16,7 @@ namespace _0115.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             Database db = new Database();
+            
             MySqlConnection conn = db.GetConnection();
             if(conn==null) Console.WriteLine("접속오류");
             else Console.WriteLine("접속성공");
